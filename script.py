@@ -9,10 +9,10 @@ sheetNew = sheet.drop(unwanted_columns, axis = 1)
 sheetNew.to_excel("goodsNew.xlsx", header=False, index=False)
 
 # Креды сервисного аккаунта
-gc = gspread.service_account(filename='goodsevo-New.json')
+gc = gspread.service_account(filename='SERVICE_ACCOUNT_CREDS')
 
 # ID существующего документа
-wks = gc.open_by_key('1AjQbrkUbEXUnQK76QwwHDPTnKe6cRdVeVpMNZ4HlNJE').sheet1
+wks = gc.open_by_key('SHEET_ID').sheet1
 
 # Очищаем табличку
 wks.spreadsheet.values_clear(
